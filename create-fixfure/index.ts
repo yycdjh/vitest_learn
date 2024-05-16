@@ -16,3 +16,7 @@ export function addTodo(todo: Todo) {
 }
 
 export function fighting() {}
+
+export function reset() {
+  todos.splice(0);
+}

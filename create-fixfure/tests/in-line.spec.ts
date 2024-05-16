@@ -1,7 +1,11 @@
-import { test, expect, describe } from "vitest";
-import { addTodo, fighting, State, todos } from "../index";
+import { test, expect, describe, beforeEach } from "vitest";
+import { addTodo, fighting, State, todos, reset } from "../index";
 
 describe("in-line", () => {
+  beforeEach(() => {
+    // 重置todos
+    reset();
+  });
   test("normal addTodo", () => {
     const todo = {
       title: "test",
